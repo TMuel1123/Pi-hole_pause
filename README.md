@@ -51,11 +51,23 @@ The script will:
 4. Display success/error messages
 
 ## Configuration
+### With ini-file
 Edit `config.ini` to customize:
 
 - `piHole`: Your Pi-hole IP address
 - `apiKey`: Your Pi-hole API key/password
 - `blockPause`: Duration to pause blocking (in seconds)
+
+Further description in the ini-file itself.
+
+### Direct in the script
+To avoid having an additional config file, the [PiHole_PauseBlock.py](PiHole_PauseBlock.py) can be edited in the following way:
+
+- Line 7: Comment this line
+- Line 10: Comment this line
+- Line 13: Replace `config['DEFAULT']['piHole']` with the Pi-hole IP
+- Line 14: Replace `config['DEFAULT']['apiKey']` with the Pi-hole API key
+- Line 15: Replace `config['DEFAULT']['piHole']` number of seconds to pause blocking (int)
 
 ## Error Handling
 The script includes basic error handling for:
